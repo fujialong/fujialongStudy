@@ -37,6 +37,7 @@ public class CityTest extends TestBase {
     @Test
     public void testFind() {
         System.out.println(cityRepository.findById(1013L));
+        mongoTemplate.findAll(City.class);
     }
 
     @Test
@@ -74,4 +75,5 @@ public class CityTest extends TestBase {
         List<City> list = cityRepository.findByPage("fujl", pageable);
         System.out.println(list.size());
     }
+
 }
