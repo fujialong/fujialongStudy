@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
+
+    <!-- 配置扫描包 -->
+    <context:component-scan base-package="com.fujl.study.mongo"/>
+
+    <!-- 开启注解 -->
+    <context:annotation-config></context:annotation-config>
+
+    <!-- 引入属性文件-->
+    <context:property-placeholder location="classpath*:mongodb.properties"></context:property-placeholder>
+
+    <!-- MongoDB 链接 -->
+    <bean id="simpleMongoDbFactory" class="org.springframework.data.mongodb.core.SimpleMongoDbFactory">
+        <constructor-arg index="0">
+            <bean class="com.mongodb.MongoClientURI">
+                <constructor-arg index="0" value="${mongodb.uri}"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <!-- MongoTemplate -->
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg index="0" ref="simpleMongoDbFactory"/>
+    </bean>
+
+    <!-- 配置MongoDB Repository 自动扫描 -->
+    <mongo:repositories base-package="com.fujl.study.mongo.repository" mongo-template-ref="mongoTemplate"></mongo:repositories>
+</beans>

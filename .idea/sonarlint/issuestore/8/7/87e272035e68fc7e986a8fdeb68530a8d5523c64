@@ -1,0 +1,4 @@
+
+Xsquid:S2274r":Remove this call to "wait" or move it into a "while" loop.(çå∫Ÿ8√òÂû«,
+Ésquid:S2273*"eMove this call to "wait()" into a synchronized block to be sure the monitor on "AsyncResult" is held.(çπ‡ò8√òÂû«,
+Xsquid:S2274*":Remove this call to "wait" or move it into a "while" loop.(çπ‡ò8√òÂû«,

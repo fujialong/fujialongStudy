@@ -1,0 +1,6 @@
+
+nsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(è±°ÿúÿÿÿÿ8ŒÒ­·Ì,
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(öþ§˜ýÿÿÿÿ8È¨©·Ì,
+Qsquid:S1313".Make this IP "127.0.0.1" address configurable.(¾¹µëþÿÿÿÿ8”Î†ŸÇ,
+lsquid:S2095"IUse try-with-resources or close this "MongoClient" in a "finally" clause.(¾¹µëþÿÿÿÿ8”Î†ŸÇ,
