@@ -24,6 +24,9 @@
 ## Swagger2
 - [springmvc集成swagger2](https://www.cnblogs.com/mahuan2/p/7169517.html)
 
+## Smart-doc
+[smart-doc完全基于源代码和原生注释来推导的restful api文档](https://github.com/shalousun/ApplicationPower)
+
 ## Ehcache
 - [Spring+EhCache缓存实例 - 技术与人生 - 博客园](https://www.cnblogs.com/mxmbk/articles/5162813.html)
 
