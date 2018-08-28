@@ -108,7 +108,7 @@
         <dependency>
             <groupId>com.github.shalousun</groupId>
             <artifactId>smart-doc</artifactId>
-            <version>RELEASE</version>
+            <version>1.0</version>
             <scope>compile</scope>
         </dependency>
 
